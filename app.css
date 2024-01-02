@@ -1,0 +1,81 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+.calculator {
+  width: 50%;
+}
+
+.buttons {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(4, 100px);
+}
+
+.buttons > :last-child {
+  grid-column: span 3;
+}
+
+button {
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(49, 49, 49);
+  color: white;
+
+  &&:hover {
+    background-color: rgb(122, 121, 121);
+  }
+}
+
+.controls {
+  color: white;
+  background-color: rgb(22, 22, 22);
+}
+
+.display {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  height: 50px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.display button {
+  padding: 3px 7px 3px 7px;
+}
+
+.text {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  background-color: black;
+  border: none;
+  width: 85%;
+  overflow: auto;
+
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
+}
+
+.theme {
+  color: white;
+}

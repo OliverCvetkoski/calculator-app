@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="theme">dark mode</div>
+      <div class="calculator">
+        <div class="display">
+          <input type="text" class="text" oninput="validateInput(event)" />
+          <button onclick="deleteOneCharacter()">x</button>
+        </div>
+        <div class="buttons">
+          <button class="controls" onclick="clearDisplay()">C</button>
+          <button class="controls" onclick="addControls('%')">%</button>
+          <button class="controls" onclick="addControls('/')">÷</button>
+          <button class="controls" onclick="addControls('*')">×</button>
+          <button onclick="addToDisplay('9')">9</button>
+          <button onclick="addToDisplay('8')">8</button>
+          <button onclick="addToDisplay('7')">7</button>
+          <button class="controls" onclick="addControls('+')">+</button>
+          <button onclick="addToDisplay('6')">6</button>
+          <button onclick="addToDisplay('5')">5</button>
+          <button onclick="addToDisplay('4')">4</button>
+          <button class="controls" onclick="addControls('-')">-</button>
+          <button onclick="addToDisplay('3')">3</button>
+          <button onclick="addToDisplay('2')">2</button>
+          <button onclick="addToDisplay('1')">1</button>
+          <button class="controls" onclick="addControls('.')">.</button>
+          <button onclick="addToDisplay('0')">0</button>
+          <button class="controls" onclick="summarize()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
