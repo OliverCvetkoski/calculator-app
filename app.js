@@ -32,6 +32,26 @@ function summarize() {
   displayText.value = result;
 }
 
+/* function summarize() {
+  const expression = displayText.value;
+
+  // Extract the numeric part before the percentage
+  const numericPart = expression.match(/^\d+/);
+  const baseValue = numericPart ? parseFloat(numericPart[0]) : 0;
+
+  // Extract the percentage part
+  const percentagePart = expression.match(/(\d+)%/);
+  const percentageValue = percentagePart
+    ? parseFloat(percentagePart[1]) / 100
+    : 0;
+
+  // Calculate the result (subtract percentage from the base value)
+  const result = baseValue - baseValue * percentageValue;
+
+  // Set the result in the display
+  displayText.value = result;
+} */
+
 function darkMode() {
   container.style.backgroundColor = "black";
   img.src = "assets/Moon.svg";

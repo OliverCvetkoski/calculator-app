@@ -83,15 +83,12 @@ input:focus {
 .themeDiv {
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 .theme {
   font-weight: 800;
   font-size: 20px;
-}
-
-.img {
-  cursor: pointer;
 }
 
 /*  light mode */
