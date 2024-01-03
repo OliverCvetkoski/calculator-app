@@ -9,12 +9,16 @@ const display = document.querySelector(".display");
 let isDarkMode = false;
 
 function addToDisplay(value) {
-  let maxLength = 15;
+  const maxLength = 18;
 
   const currentExpression = displayText.value;
   const lastCharIsOperator = /[-+*/.]$/.test(currentExpression);
 
   if (lastCharIsOperator && /[+\-*/.]/.test(value)) {
+    return;
+  }
+
+  if (currentExpression.length >= maxLength) {
     return;
   }
 
@@ -51,7 +55,7 @@ function toggleTheme() {
 
   container.classList.toggle("containerLight", !isDarkMode);
   img.src = `assets/${themeMode}.svg`;
-  theme.innerText = `Change to ${themeText} Mode`;
+  theme.innerText = `Switch to ${themeText} Mode`;
 
   numbers.forEach((btn) => btn.classList.toggle("numbersLight", !isDarkMode));
   controls.forEach((btn) => btn.classList.toggle("controlsLight", !isDarkMode));
