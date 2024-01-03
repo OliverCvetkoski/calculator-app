@@ -6,7 +6,7 @@ const numbers = document.querySelectorAll(".numbers");
 const controls = document.querySelectorAll(".controls");
 const display = document.querySelector(".display");
 
-let isDarkMode = false;
+let isDarkMode = true;
 
 function addToDisplay(value) {
   displayText.value += value;
@@ -52,43 +52,19 @@ function summarize() {
   displayText.value = result;
 } */
 
-function darkMode() {
-  container.style.backgroundColor = "black";
-  img.src = "assets/Moon.svg";
-  theme.innerText = "Dark Mode";
-  theme.classList.remove("containerLight");
-  numbers.forEach((btn) => {
-    btn.classList.remove("numbersLight");
-  });
-  controls.forEach((btn) => {
-    btn.classList.remove("controlsLight");
-  });
-  display.classList.remove("displayLight");
-  displayText.classList.remove("textLight");
-}
-
-function lightMode() {
-  numbers.forEach((btn) => {
-    btn.classList.add("numbersLight");
-  });
-  container.style.backgroundColor = "white";
-  img.src = "assets/Sun.svg";
-  theme.innerText = "Light Mode";
-  theme.classList.add("containerLight");
-  controls.forEach((btn) => {
-    btn.classList.add("controlsLight");
-  });
-  display.classList.add("displayLight");
-  displayText.classList.add("textLight");
-}
-
 function toggleTheme() {
   isDarkMode = !isDarkMode;
-  if (isDarkMode) {
-    darkMode();
-  } else {
-    lightMode();
-  }
+  const themeMode = isDarkMode ? "Moon" : "Sun";
+  const themeText = isDarkMode ? "Dark" : "Light";
+
+  container.classList.toggle("containerLight", isDarkMode);
+  img.src = `assets/${themeMode}.svg`;
+  theme.innerText = `Change to ${themeText} Mode`;
+
+  numbers.forEach((btn) => btn.classList.toggle("numbersLight", isDarkMode));
+  controls.forEach((btn) => btn.classList.toggle("controlsLight", isDarkMode));
+  display.classList.toggle("displayLight", isDarkMode);
+  displayText.classList.toggle("textLight", isDarkMode);
 }
 
 toggleTheme();
