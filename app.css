@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+.container,
+.numbers,
+.controls,
+.display,
+.text {
+  transition: background-color 0.5s, color 0.5s;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -128,5 +136,5 @@ input:focus {
 .controlsLight,
 .displayLight,
 .textLight {
-  transition: background-color 0.9s, color 0.9s;
+  transition: background-color 0.5s, color 0.5s;
 }
