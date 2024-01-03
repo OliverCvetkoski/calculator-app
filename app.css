@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100svh;
+  color: white;
 }
 
 .calculator {
@@ -93,6 +94,11 @@ input:focus {
 
 /*  light mode */
 
+.containerLight {
+  background-color: white;
+  color: black;
+}
+
 .numbersLight {
   background-color: rgb(228, 228, 228);
   color: black;
@@ -115,4 +121,12 @@ input:focus {
 .textLight {
   background-color: rgb(228, 228, 228);
   color: black;
+}
+
+.containerLight,
+.numbersLight,
+.controlsLight,
+.displayLight,
+.textLight {
+  transition: background-color 0.9s, color 0.9s;
 }

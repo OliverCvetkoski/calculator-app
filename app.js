@@ -56,7 +56,7 @@ function darkMode() {
   container.style.backgroundColor = "black";
   img.src = "assets/Moon.svg";
   theme.innerText = "Dark Mode";
-  theme.style.color = "white";
+  theme.classList.remove("containerLight");
   numbers.forEach((btn) => {
     btn.classList.remove("numbersLight");
   });
@@ -74,7 +74,7 @@ function lightMode() {
   container.style.backgroundColor = "white";
   img.src = "assets/Sun.svg";
   theme.innerText = "Light Mode";
-  theme.style.color = "black";
+  theme.classList.add("containerLight");
   controls.forEach((btn) => {
     btn.classList.add("controlsLight");
   });
